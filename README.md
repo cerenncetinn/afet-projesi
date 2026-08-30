@@ -1,4 +1,4 @@
-# Afet Yönetim Sistemi
+# 🚨 Afet Öncesi ve Sonrası Akıllı Kaynak Yönetimi
 
 <p align="center">
   <strong>Afet durumlarında afetzedeler ile gönüllüleri aynı platform üzerinde buluşturan mobil koordinasyon ve yardım yönetim uygulaması.</strong>
@@ -13,7 +13,7 @@
 
 ### 📌 Proje Hakkında
 
-Afet Yönetim Sistemi, afet sonrasında yardım ihtiyacı bulunan kişilerin taleplerini konum ve görsel bilgileriyle iletebilmesini, gönüllülerin ise bu talepleri harita ve görev ekranları üzerinden takip ederek uygun operasyonlara katılabilmesini amaçlayan mobil bir koordinasyon platformudur.
+Afet Öncesi ve Sonrası Akıllı Kaynak Yönetimi, afet sonrasında yardım ihtiyacı bulunan kişilerin taleplerini konum ve görsel bilgileriyle iletebilmesini, gönüllülerin ise bu talepleri harita ve görev ekranları üzerinden takip ederek uygun operasyonlara katılabilmesini amaçlayan mobil bir koordinasyon platformudur.
 
 Uygulama; Firebase Authentication ve Cloud Firestore ile kullanıcı ve ihbar yönetimi, harita ve konum servisleri ile saha koordinasyonu, cihaz üzerindeki yerel depolama ve ağ durumu takibi ile çevrimdışı çalışma desteği ve görev önceliklendirmesine yardımcı olan akıllı skor mekanizması içerir.
 
@@ -88,6 +88,14 @@ Toplanma Alanları: İstanbul toplanma alanlarının cihazdaki veri dosyasından
   <img src="./docs/screenshots/ihbar-olusturma-2.jpg" alt="İhbar Oluşturma - 2" width="300"/>
 </p>
 
+### 🌍 Deprem Bilgileri
+
+<p align="center">
+
+  <img src="./docs/screenshots/deprem-bilgileri.png" alt="Deprem Bilgileri" width="300"/>
+
+</p>
+
 ### Toplanma Alanları
 
 <p align="center">
@@ -138,30 +146,39 @@ Toplanma Alanları: İstanbul toplanma alanlarının cihazdaki veri dosyasından
 - İstanbul toplanma alanlarının harita üzerinde gösterilmesi.
 - Kullanıcının konumuna veya arama kriterine göre toplanma alanlarının listelenmesi.
 
-### 📡 4. Çevrimdışı Çalışma ve Senkronizasyon
+### 🌍 4. Afet ve Deprem Bilgileri
+
+- Güncel afet ve deprem bilgilerinin API üzerinden alınması.
+- Alınan verilerin uygulama içerisinde kullanıcıya sunulması.
+- Daha önce alınan verilerin cihaz üzerinde önbelleğe alınması.
+- İnternet bağlantısı olmadığında önbelleğe alınan verilerin görüntülenebilmesi.
+
+### 📡 5. Çevrimdışı Çalışma ve Senkronizasyon
 
 Afet ortamında internet bağlantısının kesilebileceği göz önünde bulundurularak uygulamada çevrimdışı çalışma desteği tasarlanmıştır.
 
-- `@react-native-community/netinfo` ile ağ durumu takip edilir.
-- `AsyncStorage` ile cihaz üzerinde yerel veri saklanır.
-- İnternet bağlantısı olmadığında yeni ihbarlar yerel kuyruğa alınır.
-- Bağlantı tekrar sağlandığında bekleyen verilerin Firebase'e gönderilmesi hedeflenir.
-- Kullanıcıya çevrimdışı mod hakkında bilgilendirme gösterilir.
+- `@react-native-community/netinfo` ile cihazın ağ bağlantısı takip edilir.
+- `AsyncStorage` ile gerekli veriler cihaz üzerinde yerel olarak saklanır.
+- İnternet bağlantısı olmadığında oluşturulan yeni ihbarlar yerel senkronizasyon kuyruğuna alınır.
+- Çevrimdışı oluşturulan ihbarlar benzersiz kimlik bilgileriyle yerel olarak saklanır.
+- İnternet bağlantısı yeniden sağlandığında bekleyen ihbarlar Firebase ile senkronize edilir.
+- Daha önce alınan bazı veriler bağlantı kesintisi sırasında önbellekten görüntülenebilir.
+- Kullanıcıya çevrimdışı çalışma durumu hakkında bilgilendirme gösterilir.
 
-### 🧠 5. Akıllı İhbar Analizi ve Öneri Mekanizması
+### 🧠 6. Kural Tabanlı Akıllı Görev Önerisi
 
-Gönüllülere görev seçiminde yardımcı olmak amacıyla ihbarların önceliklendirilmesine yönelik bir skor ve öneri mekanizması kullanılır.
+Gönüllülere uygun görevlerin belirlenmesinde yardımcı olmak amacıyla kural tabanlı bir skor ve öneri mekanizması kullanılır.
 
-Değerlendirmede uygulamadaki ihbar bilgileri, aciliyet seviyesi, ihtiyaç kategorisi, etkilenen kişi sayısı, gönüllünün konumu ve mesafesi ile yetkinlik bilgileri gibi parametrelerden yararlanılır.
+Değerlendirmede ihbarın aciliyet seviyesi, ihtiyaç kategorisi, etkilenen kişi sayısı, gönüllünün konumu, görev ile gönüllü arasındaki mesafe ve gönüllünün yetkinlik bilgileri gibi parametrelerden yararlanılır.
 
-> Bu modül harici bir yapay zekâ API'sine dayalı değildir. Projede kullanılan akıllı skor ve öneri mekanizması, görevlerin önceliklendirilmesine ve gönüllü-görev eşleştirmesine destek olacak şekilde tasarlanmıştır.
+Bu mekanizma harici bir yapay zekâ API'sine veya makine öğrenmesi modeline dayanmamaktadır. Kural tabanlı skorlamayla görevlerin önceliklendirilmesine ve gönüllü-görev eşleştirmesine destek olacak şekilde tasarlanmıştır.
 
-### 🏕️ 6. Toplanma Alanları
+### 🏕️ 7. Toplanma Alanları
 
 - İstanbul toplanma alanlarının uygulama içerisindeki veri dosyasından listelenmesi.
-- Konuma göre mesafe hesaplanması.
-- En yakın alanların öncelikli olarak gösterilmesi.
-- Toplanma alanının harita üzerinde açılması.
+- Kullanıcının konumuna göre mesafe hesaplanması.
+- En yakın toplanma alanlarının öncelikli olarak gösterilmesi.
+- Seçilen toplanma alanının harita üzerinde görüntülenmesi.
 - İlçe veya adres üzerinden arama yapılabilmesi.
 
 ## 🛠️ Teknoloji Yığını
@@ -184,76 +201,80 @@ Değerlendirmede uygulamadaki ihbar bilgileri, aciliyet seviyesi, ihtiyaç kateg
 
 ## 🧩 Proje Dizin Yapısı
 
+```text
 afet-projesi/
 ├── app/
-│ ├── afetzede/
-│ │ └── afetzedePaneli.js
-│ ├── gonullu/
-│ │ ├── gonulluPaneli.js
-│ │ ├── ihbarAnalizi.js
-│ │ ├── operasyonHaritasi.js
-│ │ ├── profil.js
-│ │ └── yoldayim.js
-│ ├── \_layout.js
-│ ├── forgotPassword.js
-│ ├── home.js
-│ ├── index.js
-│ ├── login.js
-│ └── register.js
+│   ├── afetzede/
+│   │   └── afetzedePaneli.js
+│   ├── gonullu/
+│   │   ├── gonulluPaneli.js
+│   │   ├── ihbarAnalizi.js
+│   │   ├── operasyonHaritasi.js
+│   │   ├── profil.js
+│   │   └── yoldayim.js
+│   ├── _layout.js
+│   ├── forgotPassword.js
+│   ├── home.js
+│   ├── index.js
+│   ├── login.js
+│   └── register.js
 │
 ├── src/
-│ ├── components/
-│ │ ├── gonullu/
-│ │ │ ├── aiRecommendation.js
-│ │ │ ├── gonulluBottomTab.js
-│ │ │ └── taskCard.js
-│ │ ├── OfflineSyncManager.js
-│ │ ├── bottomTab.js
-│ │ ├── ihbarModali.js
-│ │ ├── konumSecModal.js
-│ │ └── registerInputs.js
-│ ├── constants/
-│ │ ├── ihbarConstants.js
-│ │ └── theme.js
-│ ├── data/
-│ │ └── istanbulAssemblyAreas.json
-│ ├── firebase/
-│ │ └── firebaseConfig.js
-│ ├── hooks/
-│ │ ├── gonullu/
-│ │ │ └── useFetchTasks.js
-│ │ ├── useAuth.js
-│ │ ├── useLocation.js
-│ │ ├── useMedia.js
-│ │ └── useNetworkStatus.js
-│ ├── styles/
-│ │ ├── afetzedeStyles.js
-│ │ ├── gonulluStyles.js
-│ │ ├── ihbarStyles.js
-│ │ ├── loginStyles.js
-│ │ └── registerStyles.js
-│ ├── tabs/
-│ │ ├── mapTab.js
-│ │ ├── profileTab.js
-│ │ ├── reportsTab.js
-│ │ └── tasksTab.js
-│ └── utils/
-│ ├── geoUtils.js
-│ └── offlineStorage.js
+│   ├── components/
+│   │   ├── gonullu/
+│   │   │   ├── aiRecommendation.js
+│   │   │   ├── gonulluBottomTab.js
+│   │   │   └── taskCard.js
+│   │   ├── OfflineSyncManager.js
+│   │   ├── bottomTab.js
+│   │   ├── ihbarModali.js
+│   │   ├── konumSecModal.js
+│   │   └── registerInputs.js
+│   ├── constants/
+│   │   ├── ihbarConstants.js
+│   │   └── theme.js
+│   ├── data/
+│   │   └── istanbulAssemblyAreas.json
+│   ├── firebase/
+│   │   └── firebaseConfig.js
+│   ├── hooks/
+│   │   ├── gonullu/
+│   │   │   └── useFetchTasks.js
+│   │   ├── useAuth.js
+│   │   ├── useLocation.js
+│   │   ├── useMedia.js
+│   │   └── useNetworkStatus.js
+│   ├── styles/
+│   │   ├── afetzedeStyles.js
+│   │   ├── gonulluStyles.js
+│   │   ├── ihbarStyles.js
+│   │   ├── loginStyles.js
+│   │   └── registerStyles.js
+│   ├── tabs/
+│   │   ├── mapTab.js
+│   │   ├── profileTab.js
+│   │   ├── reportsTab.js
+│   │   └── tasksTab.js
+│   └── utils/
+│       ├── geoUtils.js
+│       └── offlineStorage.js
 │
 ├── assets/
+│
 ├── docs/
-│ └── screenshots/
-│ ├── afetzede-gorev-merkezi.jpg
-│ ├── afetzede-harita.jpg
-│ ├── afetzede-talepler.jpg
-│ ├── gonullu-gorev-merkezi.jpg
-│ ├── gonullu-gorevler.jpg
-│ ├── gonullu-raporlar.png
-│ ├── ihbar-olusturma-1.jpg
-│ ├── ihbar-olusturma-2.jpg
-│ ├── offline-mod.png
-│ └── toplanma-alanlari.jpg
+│   └── screenshots/
+│       ├── afetzede-gorev-merkezi.jpg
+│       ├── afetzede-harita.jpg
+│       ├── afetzede-talepler.jpg
+│       ├── deprem-bilgileri.png
+│       ├── gonullu-gorev-merkezi.jpg
+│       ├── gonullu-gorevler.jpg
+│       ├── gonullu-harita.jpg
+│       ├── gonullu-raporlar.png
+│       ├── ihbar-olusturma-1.jpg
+│       ├── ihbar-olusturma-2.jpg
+│       ├── offline-mod.png
+│       └── toplanma-alanlari.jpg
 │
 ├── scripts/
 ├── .gitignore
@@ -262,6 +283,7 @@ afet-projesi/
 ├── package.json
 ├── package-lock.json
 └── README.md
+```
 
 ## 🚀 Kurulum ve Çalıştırma
 
