@@ -146,12 +146,12 @@ Toplanma Alanları: İstanbul toplanma alanlarının cihazdaki veri dosyasından
 - İstanbul toplanma alanlarının harita üzerinde gösterilmesi.
 - Kullanıcının konumuna veya arama kriterine göre toplanma alanlarının listelenmesi.
 
-### 🌍 4. Afet ve Deprem Bilgileri
+### 🌍 4. Deprem Bilgileri
 
-- Güncel afet ve deprem bilgilerinin API üzerinden alınması.
-- Alınan verilerin uygulama içerisinde kullanıcıya sunulması.
-- Daha önce alınan verilerin cihaz üzerinde önbelleğe alınması.
-- İnternet bağlantısı olmadığında önbelleğe alınan verilerin görüntülenebilmesi.
+- Güncel deprem bilgilerinin API üzerinden alınması.
+- Alınan deprem verilerinin uygulama içerisinde kullanıcıya sunulması.
+- Daha önce alınan deprem verilerinin cihaz üzerinde önbelleğe alınması.
+- İnternet bağlantısı olmadığında önbelleğe alınan deprem verilerinin görüntülenebilmesi.
 
 ### 📡 5. Çevrimdışı Çalışma ve Senkronizasyon
 
