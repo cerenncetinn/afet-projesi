@@ -181,7 +181,7 @@ Bu mekanizma harici bir yapay zekâ API'sine veya makine öğrenmesi modeline da
 - Seçilen toplanma alanının harita üzerinde görüntülenmesi.
 - İlçe veya adres üzerinden arama yapılabilmesi.
 
-## 🛠️ Teknoloji Yığını
+## 🛠️ Kullanılan Teknolojiler
 
 | Alan             | Teknolojiler                                   |
 | ---------------- | ---------------------------------------------- |
@@ -368,31 +368,32 @@ Firebase istemci yapılandırmasındaki web API anahtarının bulunması tek ba�
 
 Uygulamada temel olarak aşağıdaki koleksiyonlar kullanılmaktadır:
 
+```text
 Firestore
-│
 ├── users
-│ ├── uid
-│ ├── name
-│ ├── email
-│ ├── phone
-│ ├── role
-│ ├── location
-│ └── volunteerScore
+│   ├── uid
+│   ├── name
+│   ├── email
+│   ├── phone
+│   ├── role
+│   ├── location
+│   └── volunteerScore
 │
 └── reports
-├── category
-├── description
-├── address
-├── location
-├── priority
-├── urgency
-├── peopleAffected
-├── neededVolunteers
-├── activeVolunteers
-├── volunteers
-├── status
-├── userId
-└── createdAt
+    ├── category
+    ├── description
+    ├── address
+    ├── location
+    ├── priority
+    ├── urgency
+    ├── peopleAffected
+    ├── neededVolunteers
+    ├── activeVolunteers
+    ├── volunteers
+    ├── status
+    ├── userId
+    └── createdAt
+```
 
 ## 🧪 Test ve Geliştirme
 
