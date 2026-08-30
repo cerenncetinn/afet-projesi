@@ -45,10 +45,16 @@ Toplanma Alanları: İstanbul toplanma alanlarının cihazdaki veri dosyasından
   <img src="./docs/screenshots/gonullu-gorev-merkezi.jpg" alt="Gönüllü Görev Merkezi" width="300"/>
 </p>
 
-### Operasyon Haritası
+### Afetzede Haritası
 
 <p align="center">
-  <img src="./docs/screenshots/afetzede-harita.jpg" alt="Operasyon Haritası" width="300"/>
+  <img src="./docs/screenshots/afetzede-harita.jpg" alt="Afetzede Haritası" width="300"/>
+</p>
+
+### Gönüllü Harita
+
+<p align="center">
+  <img src="./docs/screenshots/gonullu-harita.jpg" alt="Gönüllü Harita" width="300"/>
 </p>
 
 ### Taleplerim
@@ -57,16 +63,16 @@ Toplanma Alanları: İstanbul toplanma alanlarının cihazdaki veri dosyasından
   <img src="./docs/screenshots/afetzede-talepler.jpg" alt="Taleplerim" width="300"/>
 </p>
 
-### Gönüllü Raporlar
+### Akıllı İhbar Analizi
 
 <p align="center">
-  <img src="./docs/screenshots/gonullu-raporlar.png" alt="Gönüllü Raporlar" width="300"/>
+  <img src="./docs/screenshots/gonullu-raporlar.png" alt="Akıllı İhbar Analizi" width="300"/>
 </p>
 
-### Gönüllü Görevler
+### Gönüllü Görevleri
 
 <p align="center">
-  <img src="./docs/screenshots/gonullu-gorevler.jpg" alt="Gönüllü Görevler" width="300"/>
+  <img src="./docs/screenshots/gonullu-gorevler.jpg" alt="Gönüllü Görevleri" width="300"/>
 </p>
 
 ### Çevrimdışı Mod
