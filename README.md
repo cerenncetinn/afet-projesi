@@ -420,17 +420,17 @@ Aşağıdaki temel kullanıcı senaryoları test edilebilir:
 
 ## 📊 Proje Bilgileri
 
-| Bilgi            | Detay                          |
-| ---------------- | ------------------------------ |
-| Proje Adı        | Afet Yönetim Sistemi           |
-| Proje Türü       | Üniversite Bitirme Projesi     |
-| Platform         | React Native / Expo            |
-| Programlama Dili | JavaScript                     |
-| Backend          | Firebase                       |
-| Veritabanı       | Cloud Firestore                |
-| Navigasyon       | Expo Router / React Navigation |
-| Harita           | React Native Maps              |
-| Konum            | Expo Location                  |
+| Bilgi            | Detay                                         |
+| ---------------- | --------------------------------------------- |
+| Proje Adı        | Afet Öncesi ve Sonrası Akıllı Kaynak Yönetimi |
+| Proje Türü       | Üniversite Bitirme Projesi                    |
+| Platform         | React Native / Expo                           |
+| Programlama Dili | JavaScript                                    |
+| Backend          | Firebase                                      |
+| Veritabanı       | Cloud Firestore                               |
+| Navigasyon       | Expo Router / React Navigation                |
+| Harita           | React Native Maps                             |
+| Konum            | Expo Location                                 |
 
 ## 👩‍💻 Geliştiriciler
 
